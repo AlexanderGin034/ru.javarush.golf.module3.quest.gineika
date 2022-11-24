@@ -1,4 +1,4 @@
-package com.example.quest;
+package com.example.quest.controller;
 
 import java.io.*;
 
