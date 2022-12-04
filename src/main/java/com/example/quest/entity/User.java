@@ -1,13 +1,14 @@
 package com.example.quest.entity;
 
+import com.example.quest.repository.UserRepository;
 import lombok.*;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
 @ToString
 @EqualsAndHashCode
 public class User {
     private final String name;
-    private final String password;
+    @Setter private String password;
     private final Statistics statistics;
 }

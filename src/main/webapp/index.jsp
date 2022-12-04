@@ -2,25 +2,25 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="WEB-INF/header.jsp"%>
 
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-
-        <main class="text-center form-signin w-50 m-auto">
-            <form action="login" method="post">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Логин или мыло</label>
-                    <input type="text" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<main class="main tile d-flex justify-content-center">
+    <img src="${pageContext.request.contextPath}/img/ufo.png" style="max-width: 100%; height: auto">
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Заголовок модального окна</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="modal-body">
+                    <p>Здесь идет основной текст модального окна</p>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Отправить</button>
-            </form>
-        </main>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
+</main>
 
 <%@ include file="WEB-INF/footer.jsp"%>
