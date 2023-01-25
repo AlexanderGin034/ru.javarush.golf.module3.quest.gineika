@@ -3,22 +3,23 @@
 <%@ include file="header.jsp"%>
 
 <div class="d-flex justify-content-center pt-5">
-    <div>
-        <p class="h2">Первый вопрос</p>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <form method="post" action="yourChoice" class="col-8">
+        <p class="h2">${question}</p>
+        <div class="form-check" >
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">
             <label class="form-check-label" for="flexRadioDefault1">
-                Default radio
+                ${answer1}
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2">
             <label class="form-check-label" for="flexRadioDefault2">
-                Default checked radio
+                ${answer2}
             </label>
         </div>
-        <button type="submit" class="btn btn-outline-primary mt-2">Signal</button>
-    </div>
+        <button type="submit" class="btn btn-outline-primary mt-2 mb-3">Signal</button>
+        <%@ include file="statistics.jsp"%>
+    </form>
 </div>
 
 <%@ include file="footer.jsp"%>

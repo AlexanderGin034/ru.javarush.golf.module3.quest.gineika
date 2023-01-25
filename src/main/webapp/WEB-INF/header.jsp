@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="/">Earth</a>
-                <a class="nav-link" href="endOr"><b style="color: brown">I</b>Be<b style="color: brown">lieve</b></a>
+                <a class="nav-link" href="logIn"><b style="color: brown">I</b>Be<b style="color: brown">lieve</b></a>
             </div>
         </div>
     </div>

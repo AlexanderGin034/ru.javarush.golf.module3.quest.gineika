@@ -6,8 +6,11 @@ import lombok.Getter;
 import java.util.List;
 
 @AllArgsConstructor
+@Getter
 public class Question {
-    @Getter private final long id;
+    private final long id;
     private final String text;
-    //private final List<Answer> answers;
+    private final List<Answer> answers;
+    private final Long beforeQuestion;
+    private final Long afterQuestion;
 }
