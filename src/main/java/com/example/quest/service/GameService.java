@@ -16,14 +16,15 @@ public class GameService {
 
     private static final QuestionRepository questions = QuestionRepository.getQUESTION_REPO();
 
-    public void incrGameCount() {
+    public void incrGameCount(boolean trueAnswer) {
+        if (!trueAnswer) {
+           gameCount = 1;
+           return;
+        }
         gameCount = gameCount == 3? 1: ++gameCount;
     }
 
     public Optional<Question> getQuestion(long keyQuestion){
         return questions.getQuestion(keyQuestion);
     }
-
-
-
 }

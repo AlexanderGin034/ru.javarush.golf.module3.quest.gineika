@@ -1,8 +1,6 @@
 package com.example.quest.service;
 
 import com.example.quest.entity.User;
-import com.example.quest.repository.UserRepository;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -27,8 +25,10 @@ class UserServiceTest {
 
     }
 
-    @Test
-    void creat() {
+    @ParameterizedTest
+    @ValueSource(strings = {"Bob", "Patric"})
+    void whenNewUserCreat() {
+
     }
 
     @ParameterizedTest

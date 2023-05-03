@@ -28,7 +28,7 @@ public class ChoiceServlet extends HttpServlet {
         try {
             ip = InetAddress.getLocalHost();
         } catch (UnknownHostException e) {
-            logger.warn("IP is null");
+            logger.warn("Host's unknown");
             ip = null;
         }
     }
@@ -61,10 +61,11 @@ public class ChoiceServlet extends HttpServlet {
                 Question question = gameService.getQuestion(gameService.getGameCount()).get();
                 Answer answerEnd = question.getAnswers().get(0);
                 session.setAttribute("end", answerEnd.getResult());
+                gameService.incrGameCount(true);
                 logger.info("before redirect endOr");
                 response.sendRedirect("/endOr");
             }else {
-                gameService.incrGameCount();
+                gameService.incrGameCount(true);
                 logger.info("before redirect yourChoice");
                 response.sendRedirect("/yourChoice");
             }
@@ -74,6 +75,7 @@ public class ChoiceServlet extends HttpServlet {
             Question question = gameService.getQuestion(gameService.getGameCount()).get();
             Answer answerEnd = question.getAnswers().get(1);
             session.setAttribute("end", answerEnd.getResult());
+            gameService.incrGameCount(false);
             logger.info("before redirect endOr");
             response.sendRedirect("/endOr");
         }
